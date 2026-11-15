@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Create a calculator using arrow functions for addition, subtraction, multiplication, and division:
+let add = (num1,num2) => {
+    sum = num1 + num2;
+    return sum;
+}
+
+let subtract = (num1,num2) => {
+    difference = num1 - num2;
+    return difference;
+}   
+
+let multiply = (num1,num2) => {
+    product = num1 * num2;
+    return product;
+}
+
+let divide = (num1,num2) => {
+    if(num2 === 0) {
+        return "Error: Division by zero is not allowed.";
+    }
+
+    quotient = num1 / num2;
+    return quotient;
+}
+
+console.log("sum is: " + add(5, 3)); 
+console.log("difference is: " + subtract(10, 4)); 
+console.log("product is: " + multiply(6, 7)); 
+console.log("quotient is: " + divide(20, 4));
+
+
+// Create a function that accepts an arrow function as a callback and displays the result of multiplying two numbers:
+function showProduct(num1, num2, callback) {
+    let result = (num1 * num2);
+    callback(result);
+}
+
+let result = (answer) => {
+    console.log("product is: " + answer);
+}
+
+showProduct(6, 7, result);
+
+
+// Create an async function that waits 3 seconds and then prints "Data Loaded Successfully":
+setTimeout(() => {
+    console.log("Data loaded successfully.");
+}, 3000);
+
+
+// Create a function that checks a student's marks using a callback:
+// Marks 40 or above: Passed.
+// Marks below 40: Failed.
+function checkmarks(marks, callback) {
+    callback(marks);
+}
+
+function Progress(marks) {
+    if (marks >= 40) {
+        console.log("Passed");
+    } else {
+        console.log("Failed");
+    }
+}
+
+checkmarks(67, Progress);
+
+</script>
+</body>
+</html>

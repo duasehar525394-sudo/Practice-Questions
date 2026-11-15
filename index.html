@@ -45,11 +45,11 @@ function showProduct(num1, num2, callback) {
     callback(result);
 }
 
-let result = (answer) => {
+let displayresult = (answer) => {
     console.log("product is: " + answer);
 }
 
-showProduct(6, 7, result);
+showProduct(6, 7, displayresult);
 
 
 // Create an async function that waits 3 seconds and then prints "Data Loaded Successfully":
@@ -65,7 +65,7 @@ function checkmarks(marks, callback) {
     callback(marks);
 }
 
-function Progress(marks) {
+function progress(marks) {
     if (marks >= 40) {
         console.log("Passed");
     } else {
@@ -73,7 +73,7 @@ function Progress(marks) {
     }
 }
 
-checkmarks(67, Progress);
+checkmarks(67, progress);
 
 </script>
 </body>
